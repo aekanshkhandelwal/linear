@@ -10,7 +10,9 @@ const userRoutes = require('./routes/users');
 const issueRoutes = require('./routes/issues');
 
 
-dotenv.config();
+const path = require('path');
+
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const app = express();
 
