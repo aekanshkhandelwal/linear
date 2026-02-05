@@ -1,0 +1,178 @@
+/* Projects View Styles */
+
+.projects-header {
+    height: 48px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-breadcrumb-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.projects-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e3e4e8;
+}
+
+.projects-tabs {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.projects-tab {
+    padding: 2px 8px;
+    font-size: 13px;
+    color: #8a8f98;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.projects-tab.active {
+    background-color: rgba(60, 60, 65, 0.6);
+    color: #e3e4e8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.new-view-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8a8f98;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.new-view-tab:hover {
+    color: #e3e4e8;
+}
+
+.projects-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.add-project-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e3e4e8;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.add-project-btn:hover {
+    color: #fff;
+}
+
+.projects-toolbar {
+    height: 44px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8a8f98;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.projects-empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-empty-icon {
+    margin-bottom: 24px;
+    color: #e3e4e8;
+    opacity: 0.9;
+}
+
+.projects-empty-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e3e4e8;
+    margin-bottom: 12px;
+}
+
+.projects-empty-description {
+    font-size: 14px;
+    color: #8a8f98;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.projects-empty-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.create-project-primary-btn {
+    background-color: #5e6ad2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.create-project-primary-btn:hover {
+    background-color: #6e7be2;
+}
+
+.shortcut-hint {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+.documentation-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e3e4e8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.documentation-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}

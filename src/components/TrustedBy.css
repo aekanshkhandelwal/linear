@@ -1,0 +1,102 @@
+.trusted-section {
+    padding: 100px 0;
+    text-align: center;
+    background: black;
+}
+
+.trusted-title {
+    font-size: 24px;
+    line-height: 1.4;
+    color: white(--text-primary);
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+.logo-wall {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+}
+
+.logo-item {
+    color: white(--text-secondary);
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: opacity 0.3s, filter 0.3s;
+    cursor: default;
+    letter-spacing: -0.02em;
+}
+
+.logo-wall:hover .logo-item {
+    opacity: 0.4;
+    filter: blur(4px);
+}
+
+.meet-customers-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.meet-customers-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.logo-wall:hover .meet-customers-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.logo-0 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+/* OpenAI */
+.logo-1 {
+    font-family: monospace;
+    letter-spacing: -0.05em;
+}
+
+/* Cash App */
+.logo-4 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+}
+
+/* Vercelish */
+.logo-7 {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* Cursor */
+
+@media (max-width: 768px) {
+    .logo-wall {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

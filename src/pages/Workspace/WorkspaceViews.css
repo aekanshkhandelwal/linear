@@ -1,0 +1,269 @@
+/* WorkspaceViews.css */
+
+/* Keep existing styles */
+.views-header {
+    height: 48px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.views-breadcrumb-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.views-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e3e4e8;
+}
+
+.views-tabs {
+    display: flex;
+    gap: 4px;
+}
+
+.views-tab {
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #8a8f98;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.1s, background-color 0.1s;
+}
+
+.views-tab:hover {
+    color: #b4b8c0;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.views-tab.active {
+    color: #e3e4e8;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.views-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.display-btn,
+.new-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #8a8f98;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.new-view-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e3e4e8;
+}
+
+.display-btn:hover,
+.new-view-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Empty State */
+.views-empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.views-empty-icon {
+    margin-bottom: 24px;
+    color: #e3e4e8;
+    opacity: 0.8;
+}
+
+.views-empty-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e3e4e8;
+    margin-bottom: 12px;
+}
+
+.views-empty-description {
+    font-size: 14px;
+    color: #8a8f98;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.views-empty-subtext {
+    font-size: 14px;
+    color: #8a8f98;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.keyboard-shortcut {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #aeb1b7;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.views-empty-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.create-view-btn {
+    background-color: #5e6ad2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.documentation-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e3e4e8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.create-view-btn:hover {
+    background-color: #6e7be2;
+}
+
+/* LIST VARIANTS - New Styles */
+.views-list-container {
+    padding: 0 20px;
+}
+
+.views-list-header {
+    display: flex;
+    font-size: 12px;
+    color: #8a8f98;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vl-col-name {
+    flex: 1;
+}
+
+.vl-col-owner {
+    width: 150px;
+    text-align: right;
+}
+
+/* Group Header (like Collapsible) */
+.vl-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: #e3e4e8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.vl-group-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vl-group-avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #007aff;
+    color: white;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.vl-group-subtitle {
+    color: #8a8f98;
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.vl-group-add {
+    color: #8a8f98;
+    cursor: pointer;
+}
+
+.vl-group-add:hover {
+    color: #e3e4e8;
+}
+
+/* Row Item */
+.vl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0 8px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.vl-row:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.vl-row-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vl-row-desc {
+    color: #7d818a;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.vl-row-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vl-owner-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #e3e4e8;
+}

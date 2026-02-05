@@ -1,0 +1,268 @@
+/* Full View Container (Replaces Modal Styles) */
+.pd-view-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #0b0c0e;
+    /* Match workspace bg */
+    color: #e3e4e8;
+    overflow: hidden;
+}
+
+/* Header */
+.pd-header {
+    height: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.pd-breadcrumb-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8a8f98;
+}
+
+.pd-breadcrumb-item {
+    color: #8a8f98;
+    cursor: pointer;
+}
+
+.pd-breadcrumb-item:hover {
+    color: #e3e4e8;
+}
+
+.pd-tabs {
+    display: flex;
+    gap: 4px;
+    background: #1a1c20;
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pd-tab {
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #8a8f98;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pd-tab.active {
+    background: #2c2e33;
+    color: #e3e4e8;
+}
+
+.pd-tab:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Main Layout: Left Content + Right Sidebar */
+.pd-main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.pd-content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px 40px;
+}
+
+.pd-right-sidebar {
+    width: 280px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Content Area Styles */
+.pd-project-header {
+    margin-bottom: 30px;
+}
+
+.pd-icon-title-row {
+    
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.pd-project-icon-large {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pd-project-title {
+    padding-top: 16px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #e3e4e8;
+    margin: 0;
+}
+
+.pd-project-summary {
+    font-size: 15px;
+    color: #8a8f98;
+    margin-bottom: 24px;
+}
+
+/* Horizontal Properties in Main Area */
+.pd-horiz-props {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.pd-prop-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8a8f98;
+}
+
+.pd-prop-val-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e3e4e8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Resources Row */
+.pd-resources-row {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #8a8f98;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.pd-add-resource {
+    color: #8a8f98;
+    cursor: pointer;
+}
+
+.pd-add-resource:hover {
+    color: #e3e4e8;
+}
+
+/* Update Button */
+.pd-update-btn-large {
+    width: calc(100% - 56px);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #e3e4e8;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: background 0.15s;
+}
+
+.pd-update-btn-large:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Description Section */
+.pd-section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a8f98;
+    margin-bottom: 12px;
+}
+
+.pd-description-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d0d2d6;
+}
+
+/* Right Sidebar Styles */
+.pd-sidebar-group {
+    margin-bottom: 30px;
+}
+
+.pd-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8a8f98;
+    margin-bottom: 12px;
+}
+
+.pd-sidebar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 10px;
+    min-height: 24px;
+}
+
+.pd-sidebar-label {
+    color: #8a8f98;
+    flex: 1;
+}
+
+.pd-sidebar-value {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e3e4e8;
+}
+
+.pd-sidebar-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #8a8f98;
+    cursor: pointer;
+}
+
+.pd-sidebar-btn:hover {
+    color: #e3e4e8;
+}
+
+.pd-milestone-add {
+    font-size: 13px;
+    color: #8a8f98;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pd-milestone-add:hover {
+    color: #e3e4e8;
+}

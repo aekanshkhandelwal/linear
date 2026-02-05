@@ -1,0 +1,362 @@
+/* CreateView.css */
+
+.create-view-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #0b0c0e;
+    color: #e3e4e8;
+}
+
+/* 1. Top Bar Header (Breadcrumb Only) */
+.cv-top-header {
+    height: 48px;
+    min-height: 48px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cv-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8a8f98;
+}
+
+.cv-breadcrumb-separator {
+    color: #5f636e;
+    font-size: 14px;
+}
+
+.cv-breadcrumb-inactive {
+    color: #8a8f98;
+}
+
+.cv-breadcrumb-active {
+    color: #e3e4e8;
+    font-weight: 500;
+}
+
+.cv-link-icon {
+    color: #8a8f98;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.cv-link-icon:hover {
+    opacity: 1;
+}
+
+/* 2. Main Content Area */
+.cv-content {
+    padding: 24px 32px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Title Row */
+.cv-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.cv-title-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.cv-icon-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a8f98;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.cv-main-title-input {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #e3e4e8;
+    outline: none;
+    width: 100%;
+}
+
+.cv-main-title-input::placeholder {
+    color: #5f636e;
+}
+
+/* Title Actions (Save buttons) */
+.cv-title-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-save-options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #aeb1b7;
+    margin-right: 12px;
+}
+
+.cv-save-target {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #e3e4e8;
+    cursor: pointer;
+}
+
+.cv-save-target:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cv-cancel-btn {
+    background: transparent;
+    border: none;
+    color: #e3e4e8;
+    font-size: 13px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.cv-cancel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cv-save-btn {
+    background-color: #5e6ad2;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.cv-save-btn:hover {
+    background-color: #6e7be2;
+}
+
+/* Description Row */
+.cv-description-row {
+    margin-left: 44px;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
+.cv-main-desc-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #aeb1b7;
+    outline: none;
+}
+
+.cv-main-desc-input::placeholder {
+    color: #5f636e;
+}
+
+/* Tabs & Toolbar */
+.cv-tabs-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.cv-tabs-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cv-tabs {
+    display: flex;
+    gap: 2px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.cv-tab {
+    padding: 2px 10px;
+    font-size: 13px;
+    color: #8a8f98;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.cv-tab.active {
+    background-color: rgba(60, 60, 65, 0.8);
+    color: #e3e4e8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cv-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #8a8f98;
+    cursor: pointer;
+}
+
+.cv-filter-btn:hover {
+    color: #b4b8c0;
+}
+
+.cv-display-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #8a8f98;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.cv-display-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Table Section */
+.cv-list-container {
+    flex: 1;
+}
+
+.cv-table-header {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #8a8f98;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-weight: 500;
+}
+
+.cv-col-name {
+    flex: 4;
+    padding-left: 8px;
+}
+
+.cv-col-health {
+    flex: 1.5;
+    text-align: left;
+}
+
+.cv-col-priority {
+    flex: 0.8;
+    text-align: center;
+}
+
+.cv-col-lead {
+    flex: 0.8;
+    text-align: center;
+}
+
+.cv-col-date {
+    flex: 1.2;
+    text-align: left;
+}
+
+.cv-col-status {
+    flex: 1.2;
+    text-align: left;
+}
+
+.cv-table-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 13px;
+    color: #e3e4e8;
+    transition: background-color 0.1s;
+    cursor: pointer;
+}
+
+.cv-table-row:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.cv-row-name {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 8px;
+}
+
+.cv-row-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e3e4e8;
+}
+
+.cv-row-health {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8a8f98;
+}
+
+.cv-row-priority,
+.cv-row-lead {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8a8f98;
+}
+
+.cv-row-date {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8a8f98;
+}
+
+.cv-row-status {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e3e4e8;
+}

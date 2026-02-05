@@ -1,0 +1,166 @@
+/* Members View Styles */
+
+.members-header {
+    height: 48px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.members-title-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.members-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e3e4e8;
+}
+
+.members-count {
+    color: #8a8f98;
+    font-size: 13px;
+}
+
+.members-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.invite-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e3e4e8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.invite-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.members-toolbar {
+    height: 36px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.members-table-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 12px;
+    color: #8a8f98;
+    font-weight: 400;
+}
+
+.col-mem-name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.col-mem-status {
+    width: 80px;
+    text-align: left;
+}
+
+.col-mem-joined {
+    width: 80px;
+    text-align: left;
+}
+
+.col-mem-teams {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    transition: background-color 0.1s;
+    text-decoration: none;
+}
+
+.member-row:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.member-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #007aff;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #e3e4e8;
+    line-height: 1.2;
+}
+
+.member-email {
+    font-size: 12px;
+    color: #8a8f98;
+}
+
+.admin-badge {
+    display: inline-flex;
+    padding: 2px 6px;
+    background-color: rgba(94, 106, 210, 0.2);
+    color: #8b99ff;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.joined-date {
+    font-size: 13px;
+    color: #8a8f98;
+}
+
+.teams-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e3e4e8;
+    font-size: 13px;
+}

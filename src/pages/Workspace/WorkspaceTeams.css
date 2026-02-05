@@ -1,0 +1,171 @@
+/* Teams View Styles */
+
+.teams-header {
+    height: 48px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teams-title-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.teams-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e3e4e8;
+}
+
+.teams-count {
+    color: #8a8f98;
+    font-size: 13px;
+}
+
+.teams-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.new-team-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e3e4e8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.new-team-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.teams-table-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 12px;
+    color: #8a8f98;
+    font-weight: 400;
+}
+
+.col-name {
+    flex: 1;
+}
+
+.col-membership {
+    width: 120px;
+    text-align: left;
+}
+
+.col-members {
+    width: 80px;
+    text-align: left;
+}
+
+.col-projects {
+    width: 120px;
+    text-align: right;
+    text-align: left;
+}
+
+.teams-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.team-row:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.team-icon-box {
+    width: 16px;
+    height: 16px;
+    background-color: #a52b65;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    margin-right: 12px;
+}
+
+.team-name {
+    font-size: 14px;
+    color: #e3e4e8;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.team-code {
+    font-size: 13px;
+    color: #5e6ad2;
+    color: #8a8f98;
+    text-transform: uppercase;
+}
+
+.joined-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    color: #e3e4e8;
+}
+
+.member-avatar-circles {
+    display: flex;
+}
+
+.mini-avatar {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #007aff;
+    color: white;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.project-count {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8a8f98;
+    font-size: 13px;
+}
+
+.teams-toolbar {
+    height: 36px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}

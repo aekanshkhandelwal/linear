@@ -1,0 +1,72 @@
+/* Workspace User Menu Styles */
+
+.user-menu-dropdown {
+    position: absolute;
+    top: 50px;
+    left: 12px;
+    width: 260px;
+    background-color: #1e1f24;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    color: #e3e4e8;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    text-decoration: none;
+}
+
+.user-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.user-menu-separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+    margin: 4px 0;
+}
+
+.menu-shortcut {
+    font-size: 11px;
+    color: #8a8f98;
+    font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', monospace;
+    letter-spacing: -0.2px;
+}
+
+.menu-arrow {
+    margin-left: auto;
+    color: #8a8f98;
+}
+
+.workspace-user-profile .user-info {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 4px;
+    transition: background-color 0.1s;
+}
+
+.workspace-user-profile .user-info:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.user-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background: transparent;
+    cursor: default;
+}

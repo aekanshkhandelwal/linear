@@ -1,0 +1,471 @@
+/* Create Issue Modal Styles */
+.cim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 100px;
+    z-index: 1000;
+}
+
+.cim-content {
+    background-color: #1a1b1e;
+    width: 780px;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    animation: cimMsgSlideDown 0.15s ease-out;
+}
+
+@keyframes cimMsgSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Header */
+.cim-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+}
+
+.cim-breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #8a8f98;
+    gap: 8px;
+}
+
+.cim-team-badge {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e3e4e8;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.cim-breadcrumb-sep {
+    color: #5f636e;
+}
+
+.cim-breadcrumb-active {
+    color: #e3e4e8;
+    font-weight: 500;
+}
+
+.cim-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.cim-icon-btn {
+    background: none;
+    border: none;
+    color: #8a8f98;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.cim-icon-btn:hover {
+    color: #e3e4e8;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Body */
+.cim-body {
+    padding: 0 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cim-title-input {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e3e4e8;
+    outline: none;
+    padding: 8px 0;
+}
+
+.cim-title-input::placeholder {
+    color: #4a4d55;
+}
+
+.cim-desc-input {
+    background: transparent;
+    border: none;
+    resize: none;
+    min-height: 80px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e3e4e8;
+    outline: none;
+    padding: 0;
+}
+
+.cim-desc-input::placeholder {
+    color: #4a4d55;
+}
+
+/* Meta Row (Status, Priority etc) */
+.cim-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.cim-meta-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #8a8f98;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.cim-meta-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #d0d3d9;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cim-meta-btn.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e3e4e8;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cim-meta-btn.icon-only {
+    padding: 4px 6px;
+}
+
+.cim-project-icon {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.cim-tag-icon {
+    font-style: normal;
+    font-size: 12px;
+}
+
+/* Footer */
+.cim-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: #1a1b1e;
+}
+
+.cim-attach-btn {
+    background: none;
+    border: none;
+    color: #8a8f98;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.cim-attach-btn:hover {
+    color: #e3e4e8;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cim-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cim-toggle-create-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #8a8f98;
+    cursor: pointer;
+}
+
+.cim-toggle-switch {
+    width: 28px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.cim-toggle-switch.checked {
+    background: #5e6ad2;
+}
+
+.cim-toggle-thumb {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.1s;
+}
+
+.cim-toggle-switch.checked .cim-toggle-thumb {
+    transform: translateX(12px);
+}
+
+.cim-create-btn {
+    background: #5e6ad2;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* Dropdown Styles */
+.cim-dropdown-container {
+    position: relative;
+}
+
+.cim-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    background: #1e1f24;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    min-width: 220px;
+    z-index: 100;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cim-dropdown-search-container,
+.cim-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: #8a8f98;
+    font-size: 13px;
+}
+
+.cim-dropdown-search {
+    background: transparent;
+    border: none;
+    color: #e3e4e8;
+    font-size: 13px;
+    outline: none;
+    width: 100%;
+}
+
+.cim-kbd {
+    background: rgba(255, 255, 255, 0.1);
+    color: #8a8f98;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.cim-dropdown-list {
+    padding: 4px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cim-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #e3e4e8;
+    transition: background 0.1s;
+}
+
+.cim-dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.cim-dropdown-item.disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.cim-item-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cim-item-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cim-count {
+    color: #8a8f98;
+    font-size: 12px;
+}
+
+.cim-check {
+    color: #e3e4e8;
+}
+
+.cim-dropdown-section-title {
+    padding: 8px 12px 4px 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #8a8f98;
+    text-transform: uppercase;
+}
+
+/* Custom Icons */
+.icon-backlog {
+    border-style: dotted;
+}
+
+.icon-progress {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fce883;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.half-circle {
+    width: 7px;
+    height: 14px;
+    background: #fce883;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    position: absolute;
+    left: 0;
+}
+
+.icon-done {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #5e6ad2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.icon-canceled {
+    color: #8a8f98;
+}
+
+.icon-priority {
+    font-weight: bold;
+    font-size: 10px;
+    width: 14px;
+    text-align: center;
+}
+
+.icon-priority.urgent {
+    border: 1px solid #e3e4e8;
+    border-radius: 2px;
+}
+
+.icon-priority.high {
+    transform: rotate(90deg);
+    letter-spacing: -2px;
+}
+
+.icon-priority.medium {
+    transform: rotate(90deg);
+    letter-spacing: -2px;
+}
+
+.icon-priority.low {
+    transform: rotate(90deg);
+}
+
+.cim-user-avatar,
+.cim-user-avatar-placeholder {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 500;
+    color: white;
+}
+
+.cim-user-avatar-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    color: #8a8f98;
+}
+
+.cim-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cim-user-email {
+    font-size: 11px;
+    color: #8a8f98;
+}
+
+.cim-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #8a8f98;
+}
+
+.cim-label-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}

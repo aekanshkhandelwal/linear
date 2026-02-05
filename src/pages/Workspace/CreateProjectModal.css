@@ -1,0 +1,454 @@
+/* Create Project Modal */
+.create-project-modal-content {
+    background-color: #1a1b1e;
+    width: 900px;
+    height: 580px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e3e4e8;
+}
+
+.cp-modal-header {
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8a8f98;
+}
+
+.cp-team-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #e3e4e8;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cp-team-badge:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cp-close-btn {
+    background: none;
+    border: none;
+    color: #8a8f98;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.cp-close-btn:hover {
+    color: #e3e4e8;
+}
+
+
+.cp-modal-body {
+    padding: 20px 48px 40px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cp-icon-placeholder {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px dashed #4a4d55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a8f98;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.cp-icon-placeholder:hover {
+    border-color: #e3e4e8;
+    color: #e3e4e8;
+}
+
+.cp-title-input {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #e3e4e8;
+    width: 100%;
+    outline: none;
+}
+
+.cp-title-input::placeholder {
+    color: #4a4d55;
+}
+
+.cp-summary-input {
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    color: #e3e4e8;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+}
+
+.cp-summary-input::placeholder {
+    color: #5f636e;
+}
+
+.cp-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cp-meta-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Start subtle */
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #8a8f98;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.cp-meta-btn:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #e3e4e8;
+}
+
+.cp-meta-btn.has-value {
+    color: #e3e4e8;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+.cp-description-area {
+    width: 100%;
+    min-height: 120px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e3e4e8;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: none;
+    font-family: inherit;
+    margin-top: 16px;
+}
+
+.cp-description-area::placeholder {
+    color: #4a4d55;
+}
+
+.cp-footer-actions {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.cp-milestone-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    color: #e3e4e8;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    margin-top: auto;
+}
+
+.cp-milestone-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+.cp-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: #1a1b1e;
+}
+
+.cp-btn-cancel {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e3e4e8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.cp-btn-cancel:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cp-btn-create {
+    background-color: #5e6ad2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cp-btn-create:hover {
+    background-color: #6e7be4;
+}
+
+/* Status Dropdown */
+.cp-status-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cp-status-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    background-color: #1a1b1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 240px;
+    padding: 6px;
+    z-index: 1000;
+}
+
+.cp-status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #8a8f98;
+}
+
+.cp-status-header-keys {
+    display: flex;
+    gap: 4px;
+}
+
+.cp-key-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 10px;
+    color: #e3e4e8;
+}
+
+.cp-status-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #e3e4e8;
+}
+
+.cp-status-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cp-status-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cp-status-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8a8f98;
+    font-size: 12px;
+}
+
+.cp-check-icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Date Picker */
+.cp-date-picker {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    background-color: #1a1b1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 280px;
+    padding: 12px;
+    z-index: 1000;
+}
+
+.cp-date-label {
+    font-size: 13px;
+    color: #8a8f98;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.cp-date-input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: #e3e4e8;
+    font-size: 13px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.cp-date-input::placeholder {
+    color: #5f636e;
+}
+
+.cp-date-input:focus {
+    border-color: #5e6ad2;
+}
+
+.cp-date-tabs {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    padding: 2px;
+    margin-bottom: 16px;
+}
+
+.cp-date-tab {
+    flex: 1;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 11px;
+    color: #8a8f98;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cp-date-tab.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e3e4e8;
+}
+
+.cp-calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.cp-month-label {
+    font-size: 13px;
+    color: #e3e4e8;
+    font-weight: 500;
+}
+
+.cp-nav-btn {
+    background: none;
+    border: none;
+    color: #8a8f98;
+    cursor: pointer;
+    padding: 0;
+}
+
+.cp-nav-btn:hover {
+    color: #e3e4e8;
+}
+
+.cp-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    text-align: center;
+}
+
+.cp-day-header {
+    font-size: 11px;
+    color: #8a8f98;
+    margin-bottom: 8px;
+}
+
+.cp-day-cell {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #e3e4e8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cp-day-cell:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cp-day-cell.dimmed {
+    color: #4a4d55;
+}
+
+.cp-day-cell.selected {
+    background-color: #5e6ad2;
+    position: relative;
+    background-color: transparent;
+}
+
+.cp-day-cell.selected::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border: 1px solid #8a8f98;
+    border-radius: 50%;
+}

@@ -1,0 +1,249 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 1001;
+}
+
+.brand-name {
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0;
+    /* Remove gap to let paddings handle spacing */
+    height: 100%;
+    align-items: center;
+}
+
+.nav-item-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link-item,
+.nav-links>a {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item-wrapper:hover .nav-link-item,
+.nav-links>a:hover {
+    color: var(--text-primary);
+}
+
+/* Mega Menu */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    /* Center relative to parent, but we might want broader centering or fixed logic if parent is small */
+    transform: translateX(-150px) translateY(10px);
+    /* Adjust positioning to align with "Product" nicely */
+    width: 600px;
+    background: #0f1012;
+    /* Dark background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    overflow: hidden;
+    z-index: 2000;
+}
+
+.nav-item-wrapper:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-150px) translateY(0);
+}
+
+.mega-menu-content {
+    display: flex;
+    padding: 20px;
+    gap: 24px;
+}
+
+.mega-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.core-col {
+    width: 200px;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    /* Vertical separator */
+    padding-right: 24px;
+}
+
+.more-col {
+    flex-grow: 1;
+}
+
+.mega-label {
+    font-size: 10px;
+    color: #666;
+    /* Subdued label color */
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.more-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 32px;
+}
+
+.mega-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 4px;
+    transition: opacity 0.2s;
+}
+
+.mega-item:hover .item-title {
+    color: white;
+}
+
+.item-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.item-desc {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.35;
+}
+
+/* Footer */
+.mega-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 13px;
+}
+
+.new-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+}
+
+.new-badge {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.feature-name {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.feature-desc {
+    color: #666;
+}
+
+.changelog-link {
+    color: #4239c2fb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.changelog-link:hover {
+    color: #e0e0e0;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-link {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.signup-btn {
+    background: rgba(235, 232, 232, 0.932);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: black;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.signup-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.mobile-toggle {
+    display: none;
+    z-index: 1001;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background: black;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}
