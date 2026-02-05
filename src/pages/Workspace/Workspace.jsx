@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { API_BASE_URL } from '../../config';
 import './Workspace.css';
 import './WorkspaceInbox.css';
 import './WorkspaceIssues.css';
@@ -80,7 +81,7 @@ const Workspace = () => {
         console.log('Fetching teams for userId:', userId, 'User object:', user);
 
         try {
-            const response = await fetch(`http://localhost:5000/api/teams/${userId}`);
+            const response = await fetch(`${API_BASE_URL}/api/teams/${userId}`);
             if (response.ok) {
                 const data = await response.json();
                 console.log('Fetched teams:', data);
@@ -98,7 +99,7 @@ const Workspace = () => {
         if (!userId) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/api/projects/${userId}`);
+            const response = await fetch(`${API_BASE_URL}/api/projects/${userId}`);
             if (response.ok) {
                 const data = await response.json();
                 setProjects(data);
@@ -116,7 +117,7 @@ const Workspace = () => {
         if (!userId) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/api/views/${userId}`);
+            const response = await fetch(`${API_BASE_URL}/api/views/${userId}`);
             if (response.ok) {
                 const data = await response.json();
                 setViews(data);
@@ -130,7 +131,7 @@ const Workspace = () => {
 
     const fetchIssues = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/issues');
+            const response = await fetch(`${API_BASE_URL}/api/issues`);
             if (response.ok) {
                 const data = await response.json();
                 setIssues(data);
@@ -159,10 +160,10 @@ const Workspace = () => {
                     }}
                     onClose={() => setActiveView('views')}
                     activeView={activeView}
-                    existingViewData={currentViewData} 
-                    isEditing={false} 
+                    existingViewData={currentViewData}
+                    isEditing={false}
                     user={user}
-                    projects={projects} 
+                    projects={projects}
                 />
             );
         }
@@ -170,7 +171,7 @@ const Workspace = () => {
             return (
                 <SavedView
                     viewData={currentViewData}
-                    projects={projects} 
+                    projects={projects}
                     user={user}
                     onClose={() => setActiveView('views')}
                     onEdit={() => {
@@ -179,7 +180,7 @@ const Workspace = () => {
                     onDelete={async (viewId) => {
                         if (window.confirm('Are you sure you want to delete this view?')) {
                             try {
-                                const response = await fetch(`http://localhost:5000/api/views/${viewId}`, {
+                                const response = await fetch(`${API_BASE_URL}/api/views/${viewId}`, {
                                     method: 'DELETE',
                                 });
                                 if (response.ok) {
@@ -208,7 +209,7 @@ const Workspace = () => {
                                 const userId = user._id || user.googleId;
                                 const identifier = teamData.identifier || teamData.name.substring(0, 3).toUpperCase();
 
-                                const response = await fetch('http://localhost:5000/api/teams', {
+                                const response = await fetch(`${API_BASE_URL}/api/teams`, {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
@@ -240,7 +241,7 @@ const Workspace = () => {
             return (
                 <IssueDetailsView
                     issue={selectedIssue}
-                    onClose={() => setActiveView('issues')} 
+                    onClose={() => setActiveView('issues')}
                     user={user}
                     project={projects.find(p => p._id === selectedIssue?.project) || { name: 'Unknown Project' }}
                 />
@@ -273,7 +274,7 @@ const Workspace = () => {
                         projects={projects}
                         team={selectedSidebarTeam}
                         user={user}
-                        setSelectedProject={setSelectedProject} 
+                        setSelectedProject={setSelectedProject}
                     />
                 );
             case 'team_views':
@@ -528,7 +529,7 @@ const Workspace = () => {
                                 const userId = user._id || user.googleId;
                                 const identifier = teamData.identifier || teamData.name.substring(0, 3).toUpperCase();
 
-                                const response = await fetch('http://localhost:5000/api/teams', {
+                                const response = await fetch(`${API_BASE_URL}/api/teams`, {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, UserPlus, Mail, Search } from 'lucide-react';
+import { API_BASE_URL } from '../../config';
 import './CreateTeamModal.css';
 
 const InviteMemberModal = ({ onClose, onInvite }) => {
@@ -14,7 +15,7 @@ const InviteMemberModal = ({ onClose, onInvite }) => {
         const timer = setTimeout(async () => {
             if (searchQuery.length > 2) {
                 try {
-                    const response = await fetch(`http://localhost:5000/api/users/search?query=${searchQuery}`);
+                    const response = await fetch(`${API_BASE_URL}/api/users/search?query=${searchQuery}`);
                     if (response.ok) {
                         const data = await response.json();
                         setSearchResults(data);
@@ -77,7 +78,7 @@ const InviteMemberModal = ({ onClose, onInvite }) => {
                                     value={selectedUser ? selectedUser.email : searchQuery}
                                     onChange={(e) => {
                                         setSearchQuery(e.target.value);
-                                        setSelectedUser(null); 
+                                        setSelectedUser(null);
                                     }}
                                     autoFocus
                                 />
@@ -101,7 +102,7 @@ const InviteMemberModal = ({ onClose, onInvite }) => {
                                             className="search-result-item"
                                             onClick={() => {
                                                 setSelectedUser(user);
-                                                setSearchQuery(''); 
+                                                setSearchQuery('');
                                                 setSearchResults([]);
                                             }}
                                             style={{

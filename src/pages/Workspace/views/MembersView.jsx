@@ -7,6 +7,7 @@ import {
     UserPlus
 } from 'lucide-react';
 import { useAuth } from '../../../context/AuthContext';
+import { API_BASE_URL } from '../../../config';
 import InviteMemberModal from '../InviteMemberModal';
 
 const MembersView = ({ setActiveView }) => {
@@ -18,7 +19,7 @@ const MembersView = ({ setActiveView }) => {
         if (!user) return;
         const userId = user._id || user.googleId;
         try {
-            const response = await fetch(`http://localhost:5000/api/users?userId=${userId}`);
+            const response = await fetch(`${API_BASE_URL}/api/users?userId=${userId}`);
             if (response.ok) {
                 const data = await response.json();
                 setUsers(data);
@@ -98,7 +99,7 @@ const MembersView = ({ setActiveView }) => {
                     onClose={() => setIsInviteModalOpen(false)}
                     onInvite={async (email) => {
                         const userId = user._id || user.googleId;
-                        const response = await fetch('http://localhost:5000/api/users/invite', {
+                        const response = await fetch(`${API_BASE_URL}/api/users/invite`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ email, invitedByUserId: userId })

@@ -13,6 +13,7 @@ import {
     Link as LinkIcon,
     Layers
 } from 'lucide-react';
+import { API_BASE_URL } from '../../config';
 
 const CreateView = ({ onCancel, onSave, user, projects = [], initialData = null }) => {
     const [title, setTitle] = useState(initialData?.name || 'All projects');
@@ -71,8 +72,8 @@ const CreateView = ({ onCancel, onSave, user, projects = [], initialData = null 
                                 }
 
                                 const url = initialData
-                                    ? `http://localhost:5000/api/views/${initialData._id}`
-                                    : 'http://localhost:5000/api/views';
+                                    ? `${API_BASE_URL}/api/views/${initialData._id}`
+                                    : `${API_BASE_URL}/api/views`;
 
                                 const method = initialData ? 'PUT' : 'POST';
 

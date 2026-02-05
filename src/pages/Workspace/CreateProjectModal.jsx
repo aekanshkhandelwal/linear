@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { X, Box, ChevronRight, CircleDashed, Users, Calendar, Crosshair, Tag, Network, CheckCircle2, Circle, Check, XCircle, CircleDot, MoreHorizontal, AlertOctagon, Signal, Grip, BarChart3, Binary, AlertCircle, ChevronLeft, ChevronDown } from 'lucide-react';
 import './CreateProjectModal.css';
 import { useAuth } from '../../context/AuthContext';
+import { API_BASE_URL } from '../../config';
 
 const CreateProjectModal = ({ onClose, onProjectCreated, teams = [] }) => {
     const { user } = useAuth();
@@ -38,13 +39,13 @@ const CreateProjectModal = ({ onClose, onProjectCreated, teams = [] }) => {
     }, [teams, selectedTeam]);
 
     // Calendar Logic
-    const [currentDate, setCurrentDate] = useState(new Date()); 
+    const [currentDate, setCurrentDate] = useState(new Date());
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
     const getFirstDayOfMonth = (year, month) => {
         const day = new Date(year, month, 1).getDay();
-        return day === 0 ? 6 : day - 1; 
+        return day === 0 ? 6 : day - 1;
     };
 
     const generateCalendarDays = (year, month) => {
@@ -82,7 +83,7 @@ const CreateProjectModal = ({ onClose, onProjectCreated, teams = [] }) => {
         if (type === 'next') newDate.setMonth(newDate.getMonth() + 1);
         newDate.setDate(day);
 
-        const formattedDate = newDate.toISOString().split('T')[0]; 
+        const formattedDate = newDate.toISOString().split('T')[0];
 
         if (isStart) {
             setStartDate(formattedDate);
@@ -420,7 +421,7 @@ const CreateProjectModal = ({ onClose, onProjectCreated, teams = [] }) => {
                                 return alert('You are not logged in. Please log in first.');
                             }
 
-                            const userId = user._id || user.id; 
+                            const userId = user._id || user.id;
                             if (!userId) {
                                 console.error('User ID is missing from user object:', user);
                                 return alert('User ID is missing. Please try logging out and logging back in.');
@@ -440,7 +441,7 @@ const CreateProjectModal = ({ onClose, onProjectCreated, teams = [] }) => {
 
                             console.log('Sending project data:', projectData);
 
-                            const response = await fetch('http://localhost:5000/api/projects', {
+                            const response = await fetch(`${API_BASE_URL}/api/projects`, {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',

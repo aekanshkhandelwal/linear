@@ -14,11 +14,12 @@ import {
     User as UserIcon
 } from 'lucide-react';
 import CreateIssueModal from '../CreateIssueModal';
+import { API_BASE_URL } from '../../../config';
 
 const TeamIssuesView = ({ issues, projects, user, teams, onIssueCreated, team, onIssueClick }) => {
 
     const filteredIssues = React.useMemo(() => {
-        if (!team) return []; 
+        if (!team) return [];
         return issues.filter(issue => issue.team === team._id || (issue.project && issue.project.team === team._id));
     }, [issues, team]);
 
@@ -33,7 +34,7 @@ const TeamIssuesView = ({ issues, projects, user, teams, onIssueCreated, team, o
                     onCreate={async (data) => {
                         console.log("Create issue", data);
                         try {
-                            const response = await fetch('http://localhost:5000/api/issues', {
+                            const response = await fetch(`${API_BASE_URL}/api/issues`, {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -41,7 +42,7 @@ const TeamIssuesView = ({ issues, projects, user, teams, onIssueCreated, team, o
                                 body: JSON.stringify({
                                     ...data,
                                     createdBy: user?._id || user?.googleId,
-                                    
+
                                 }),
                             });
 
