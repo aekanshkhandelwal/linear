@@ -85,4 +85,4 @@ npm run dev
 - `npm run lint`: Runs ESLint for code quality checks.
 
 ---
-Built with ❤️ for better project management.
+
